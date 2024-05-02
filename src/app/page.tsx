@@ -68,8 +68,8 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center p-20">
       <h1 className="flex items-center justify-center font-bold text-center mb-9">
-        <ChevronLeft className="w-5 h-5 mr-9" />
-        <span>KYC Verification</span>
+        <ChevronLeft className="w-5 h-5 mr-8 text-blue-700" />
+        <span className="mr-16">KYC Verification</span>
       </h1>
 
       <Box sx={{ width: "25%" }}>
