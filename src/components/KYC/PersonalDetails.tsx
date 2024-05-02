@@ -1,11 +1,25 @@
-"use client";
+import React from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-export default function PersonalDetails() {
+interface PersonalDetailsProps {
+  firstName: string;
+  middleName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+}
+
+export default function PersonalDetails({
+  firstName,
+  middleName,
+  lastName,
+  email,
+  phoneNumber,
+}: PersonalDetailsProps) {
   return (
-    <div className="flex flex-col items-center ">
-      <h3 className="mb-6 text-xl pr-20 font-bold">Personal Details</h3>
+    <div className="flex flex-col items-center">
+      <h3 className="mb-6 text-xl pr-20 font-bold ">Personal Details</h3>
       <div className="grid max-w-sm gap-2.5">
         <Label
           className="text-left font-semibold text-md text-gray-600"
@@ -17,6 +31,7 @@ export default function PersonalDetails() {
           className="font-normal"
           type="text"
           id="firstName"
+          defaultValue={firstName}
           placeholder="Enter your first name"
         />
         <Label
@@ -29,6 +44,7 @@ export default function PersonalDetails() {
           className="font-normal"
           type="text"
           id="middleName"
+          defaultValue={middleName}
           placeholder="Enter your middle name"
         />
         <Label
@@ -41,6 +57,7 @@ export default function PersonalDetails() {
           className="font-normal"
           type="text"
           id="lastName"
+          defaultValue={lastName}
           placeholder="Enter your last name"
         />
         <Label
@@ -53,6 +70,7 @@ export default function PersonalDetails() {
           className="font-normal"
           type="email"
           id="email"
+          defaultValue={email}
           placeholder="Enter your email"
         />
         <Label
@@ -63,8 +81,9 @@ export default function PersonalDetails() {
         </Label>
         <Input
           className="font-normal"
-          type="tel"
+          type="number"
           id="phoneNumber"
+          defaultValue={phoneNumber}
           placeholder="Enter your phone number"
         />
       </div>
