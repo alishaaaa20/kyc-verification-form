@@ -683,6 +683,9 @@ video {
   .mr-12 {
   margin-right: 3rem;
 }
+  .mt-5 {
+  margin-top: 1.25rem;
+}
   .inline-block {
   display: inline-block;
 }

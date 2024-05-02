@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -81,7 +83,7 @@ export default function PersonalDetails({
         </Label>
         <Input
           className="font-normal"
-          type="number"
+          type="tel"
           id="phoneNumber"
           defaultValue={phoneNumber}
           placeholder="Enter your phone number"
